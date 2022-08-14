@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <link rel="stylesheet" href="style.css" type="text/css" media="all" />
+<title>Love Meter</title>
+<style>
+.loader {
+  margin-left: 65%;
+  margin-top: -240px;
+  position: absolute;
+  border: 20px solid #f3f3f3;
+  border-radius: 50%;
+  border-top: 5px solid pink;
+  border-right: 5px solid blue;
+  border-bottom: 5px solid pink;
+  border-left: 5px solid blue;
+  width: 70px;
+  height: 70px;
+  -webkit-animation: spin 1s linear infinite;
+  animation: spin 1s linear infinite;
+}
+
+@-webkit-keyframes spin {
+  0% { -webkit-transform: rotate(0deg); }
+  100% { -webkit-transform: rotate(360deg); }
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+</style>
+</head>
+<body>
+
+</style>
+</head>
+<body>
+  <span id="result">
+  <img id="logo" src="logo.png"/>
+<h3>NAME:</h3><input type="text" id="name" placeholder="Your name"> <br />
+<img onclick="myFunction()" id="finger" src="fingerprint.jpeg"/>
+<h3>ANOTHER <br /> PERSON'S NAME: </h3> <input type="text" id="pass" placeholder="other person"> <br />
+<h3>RELATIONSHIP: </h3> <input type="text" id="rel" placeholder="e.g Sister" />
+
+<div id="loader"></div>
+
+<div style="display:none;" id="myDiv">
+  
+<div class="loader"></div>
+</div>
+
+<div style="display:none;" id="newDiv">
+  
+<button id="show" onclick="checkLove()">SHOW LOVE PERCENTAGE</button>
+</div>
+</span>
+<p id="percent"></p>
+<a href="app.html"><button id="refresh">Refresh</button></a>
+<script src="script.js" type="text/javascript" charset="utf-8"></script>
+
+<script>
+var myVar;
+
+function myFunction() {
+  myVar = setTimeout(showPage, 800);
+  newVar = setTimeout(loadPage, 3000);
+}
+
+function showPage() {
+  document.getElementById("loader").style.display = "none";
+  document.getElementById("myDiv").style.display = "block";
+}
+
+function loadPage() {
+  document.getElementById("newDiv").style.display = "block";
+}
+</script>
+
+</body>
+</html>
+  
